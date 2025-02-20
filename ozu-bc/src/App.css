@@ -1,0 +1,321 @@
+/* Base styles */
+:root {
+  --neon-yellow: #ffd700;
+  --neon-orange: #ff8c00;
+  --dark-bg: #0a0a1a;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  background: var(--dark-bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a1a3a 0%, var(--dark-bg) 100%);
+}
+
+/* Header styles */
+.App-header {
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.App-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--neon-yellow), var(--neon-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Project cards */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+.project-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--neon-yellow);
+  margin-bottom: 1.5rem;
+}
+
+/* Student info section */
+.student-info {
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.student-info h3 {
+  font-size: 1.4rem;
+  color: var(--neon-orange);
+  margin-bottom: 0.8rem;
+}
+
+.team-members {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Buttons */
+.neon-button {
+  background: transparent;
+  border: 2px solid var(--neon-yellow);
+  color: var(--neon-yellow);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.neon-button:hover {
+  background: var(--neon-yellow);
+  color: var(--dark-bg);
+  box-shadow: 0 0 20px var(--neon-yellow);
+  transform: scale(1.05);
+}
+
+.create-nft-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-color: var(--neon-orange);
+  color: var(--neon-orange);
+}
+
+.create-nft-button:hover {
+  background: var(--neon-orange);
+  box-shadow: 0 0 30px var(--neon-orange);
+}
+
+/* Form inputs */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.05);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--neon-yellow);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+/* Certificates section */
+.certificates ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.certificates li {
+  background: rgba(255, 215, 0, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--neon-yellow);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.certificates li.github-link {
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.certificates li.github-link:hover {
+  background: rgba(255, 215, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.certificates li a {
+  color: var(--neon-yellow);
+  text-decoration: none;
+}
+
+/* Supporters section */
+.supporters {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.supporters h4 {
+  color: var(--neon-orange);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.supporters li {
+  background: rgba(255, 215, 0, 0.05);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* Modal */
+.modal-overlay {
+  background: rgba(10, 10, 26, 0.95);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: var(--dark-bg);
+  border: 2px solid var(--neon-yellow);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  color: var(--neon-yellow);
+  margin-bottom: 2rem;
+}
+
+/* Support section */
+.support-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.units-input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.05);
+  color: var(--text-primary);
+  width: 150px;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.units-input:focus {
+  outline: none;
+  border-color: var(--neon-yellow);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+/* Add styles for address info */
+.address-info {
+  margin: 1.5rem 0;
+  padding: 0.8rem;
+  background: rgba(255, 215, 0, 0.03);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.address-info p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .projects-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .modal-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+}
+
+/* Update supporters section styles */
+.supporter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 215, 0, 0.05);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.supporter-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.supporter-address {
+  color: var(--text-primary);
+}
+
+.supporter-amount {
+  color: var(--neon-yellow);
+  font-weight: 600;
+}
+
+.supporter-percentage {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  font-family: monospace;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+}
